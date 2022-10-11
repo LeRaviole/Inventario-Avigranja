@@ -37,7 +37,7 @@ def validar(x, y, z):
 def agregarProducto(tabla):
     def agregar():
         if validar(nombreInput, precioInput, stockInput):
-            query = 'INSERT INTO Productos VALUES(NULL, ?, ?, ?)'
+            query = 'INSERT INTO Productos VALUES(NULL, ?, ?, ?, NULL)'
             parametros = (nombreInput.get(), precioInput.get(), stockInput.get())
             run_query(query, parametros)
             messagebox.showinfo(title="Exito!", message="El producto fue agregado exitosamente.")
